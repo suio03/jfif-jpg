@@ -1,0 +1,8 @@
+# *
+User-agent: *
+Allow: *
+Disallow: /_next/
+# Host
+Host: https://jfif2jpg.net/
+# Sitemaps
+Sitemap: https://jfif2jpg.net/sitemap.xml

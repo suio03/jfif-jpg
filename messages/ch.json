@@ -1,0 +1,134 @@
+{
+    "meta-title": "JFIF转JPG - 在线免费转换JFIF为JPG",
+    "meta-description": "免费在线将JFIF转换为JPG。100％安全快捷。无需注册。",
+    "h1": "JFIF转JPG转换器",
+    "description": "免费在线将JFIF转换为JPG。100％安全快捷。无需注册。",
+    "cta": {
+        "title": "立即将JFIF转换为JPG",
+        "description": "快速、免费且安全地将您的JFIF图像转换为JPG格式",
+        "button": "开始转换",
+        "quote": "您的隐私至关重要 - 我们绝不存储您的图像。"
+    },
+    "faq": {
+        "title": "关于JFIF转JPG转换器的常见问题",
+        "description": "以下是关于我们JFIF转JPG转换服务的一些最常见问题。",
+        "questions": {
+            "question1": {
+                "title": "什么是JFIF？",
+                "text": "JFIF是JPEG图像的一种文件格式，通常用于数码摄影。它是JPEG标准的一个子集，经过优化可用于网络。"
+            },
+            "question2": {
+                "title": "什么是JFIF转JPG转换器，它是如何工作的？",
+                "text": "我们的JFIF转JPG转换器是一款功能强大的在线工具，可在保持图像质量的同时将JFIF转换为JPG格式。只需上传您的JFIF文件，我们的高级转换器就会立即处理它们，让您可以直接将转换后的JPG图像下载到您的设备。"
+            },
+            "question3": {
+                "title": "这个JFIF转JPG转换器完全免费使用吗？",
+                "text": "是的，我们的JFIF转JPG转换器100％免费，没有任何隐藏费用。无需注册即可将无限数量的JFIF图像转换为JPG格式。我们不设置任何每日限制，也不要求高级订阅才能进行基本转换。"
+            },
+            "question4": {
+                "title": "JFIF转JPG转换的最大文件大小是多少？",
+                "text": "虽然单个文件大小没有限制，但总批量上传大小限制为50MB。这样可以同时将多个JFIF文件转换为JPG格式，同时确保最佳性能。"
+            },
+            "question5": {
+                "title": "使用您的JFIF转JPG转换器安全吗？",
+                "text": "绝对安全！我们的JFIF转JPG转换器优先考虑您的隐私和安全。我们使用安全的HTTPS连接，并且不存储任何上传的图像。一旦您下载转换后的JPG文件并离开网站，所有数据都会自动从我们的服务器中删除。"
+            },
+            "question6": {
+                "title": "我可以一次转换多个JFIF文件到JPG吗？",
+                "text": "是的，我们的转换器支持批量处理，允许您同时将多个JFIF文件转换为JPG格式。当您需要一次转换多个图像时，这可以节省时间，使批量转换高效且轻松。"
+            },
+            "question7": {
+                "title": "哪些设备和浏览器可以使用您的JFIF转JPG转换器？",
+                "text": "我们的JFIF转JPG转换器可在所有现代设备和浏览器上无缝运行。无论您使用的是iOS、Android、Windows还是Mac，我们的工具都与Chrome、Safari、Firefox和Edge兼容。无需安装软件 - 只需访问我们的网站并开始转换。"
+            },
+            "question8": {
+                "title": "你们会存储我的文件吗？",
+                "text": "不会，我们不会存储您的文件。转换完成后，文件将从我们的服务器中删除。"
+            },
+            "question9": {
+                "title": "JFIF转JPG转换需要多长时间？",
+                "text": "转换过程是即时的。上传JFIF文件后，我们的工具将立即处理它们，并几乎立即为您提供转换后的JPG图像。"
+            },
+            "question10": {
+                "title": "JFIF转JPG转换的最大文件大小是多少？",
+                "text": "虽然单个文件大小没有限制，但总批量上传大小限制为50MB。这样可以同时将多个JFIF文件转换为JPG格式，同时确保最佳性能。"
+            },
+            "question11": {
+                "title": "你们是否提供JFIF转JPG转换的API？",
+                "text": "目前，我们不提供JFIF转JPG转换的API。"
+            }
+        }
+    },
+    "howto": {
+        "title": "如何使用我们的在线工具将JFIF转换为JPG",
+        "description": "按照此简单的指南将您的JFIF图像转换为JPG格式。我们的分步说明适用于移动设备和台式电脑。",
+        "steps": {
+            "step1": {
+                "title": "打开JFIF转JPG转换器",
+                "text": "点击“转换为JPG”按钮打开JFIF转JPG转换器。"
+            },
+            "step2": {
+                "title": "选择您的JFIF文件",
+                "text": "点击“选择文件”按钮，选择您要转换的JFIF图像。"
+            },
+            "step3": {
+                "title": "拖放您的JFIF文件",
+                "text": "将您的JFIF图像拖放到转换区域。您可以选择多个文件进行批量转换。"
+            },
+            "step4": {
+                "title": "开始转换过程",
+                "text": "点击“转换为JPG”按钮开始JFIF转JPG转换过程。我们的工具将在保持最佳质量的同时处理每个图像。"
+            },
+            "step5": {
+                "title": "下载您的JPG文件",
+                "text": "转换完成后，点击“下载”按钮保存您的新JPG图像。对于批量转换，您可以将所有文件下载为ZIP压缩文件。"
+            }
+        }
+    },
+    "features": {
+        "title": "我们JFIF转JPG转换器的关键功能",
+        "description": "使用我们的强大功能轻松将您的JFIF图像转换为JPG格式",
+        "features": {
+            "feature1": {
+                "title": "批量转换",
+                "description": "使用我们高效的批量处理功能同时将多个JFIF文件转换为JPG格式。"
+            },
+            "feature2": {
+                "title": "闪电般快速的处理",
+                "description": "由高级服务器提供支持的即时图像转换，实现快速JFIF转JPG转换。"
+            },
+            "feature3": {
+                "title": "100％安全可靠",
+                "description": "无需注册，不存储图像，并且完全免费使用。您的隐私是我们的首要任务。"
+            },
+            "feature4": {
+                "title": "跨平台支持",
+                "description": "在任何设备或浏览器上将JFIF转换为JPG - 无需安装软件。"
+            },
+            "feature5": {
+                "title": "保持质量",
+                "description": "在将JFIF转换为JPG格式时保持原始图像质量。"
+            },
+            "feature6": {
+                "title": "强大的文件支持",
+                "description": "支持多个JFIF文件，总上传大小上限为50MB。"
+            }
+        }
+    },
+    "footer": {
+        "about": "使用我们的免费在线转换器立即将JFIF转换为JPG。",
+        "tools": "图像工具",
+        "resources": "资源",
+        "tos": "服务条款",
+        "privacy": "隐私政策",
+        "copyright": "© JFIF TO JPG - 轻松转换JFIF为JPG",
+        "copyright-suffix": "版权所有。"
+    },
+    "input": {
+        "placeholder": "将JFIF文件拖放到此处或点击上传",
+        "button": "上传文件",
+        "clear-button": "清除队列",
+        "download-button": "下载",
+        "download-all-button": "全部下载"
+    }
+}
