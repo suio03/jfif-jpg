@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 export const runtime = 'edge';
 const PYTHON_API_URL = process.env.NEXT_PUBLIC_PYTHON_API_URL || 'http://localhost:8000';
-
+const API_KEY = process.env.API_KEY;
 export async function POST(request: NextRequest) {
+    // TODO: We need to limit the size of the file
     try {
         const formData = await request.formData();
         const file = formData.get('file') as File;
@@ -17,10 +18,13 @@ export async function POST(request: NextRequest) {
         // Forward the file to Python API
         const pythonFormData = new FormData();
         pythonFormData.append('file', file);
-
+        console.log('api key', API_KEY);
         const response = await fetch(`${PYTHON_API_URL}/convert`, {
             method: 'POST',
             body: pythonFormData,
+            headers: {
+                'X-API-Key': API_KEY || '',
+            }
         });
 
         const data = await response.json();

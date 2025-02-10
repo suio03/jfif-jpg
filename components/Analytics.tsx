@@ -3,7 +3,7 @@ import Script from 'next/script'
 const Analytics = () => (
     <>
         {/* google analytics */}
-        <Script
+        {/* <Script
             async
             src="https://www.googletagmanager.com/gtag/js?id=G-69C1SS4MWF"
         />
@@ -33,7 +33,7 @@ const Analytics = () => (
                 })(window, document, "clarity", "script", "prlszvagr6");
         `
             }}
-        />
+        /> */}
         <Script
             defer
             data-domain="jfif2jpg.net"
