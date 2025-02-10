@@ -22,8 +22,7 @@ export async function POST(request: NextRequest) {
         // Forward the file to Python API
         const pythonFormData = new FormData();
         pythonFormData.append('file', file);
-
-        const response = await fetch(`http://167.235.132.101/api/convert`, {
+        const response = await fetch(`${PYTHON_API_URL}/convert`, {
             method: 'POST',
             body: pythonFormData,
             headers: {
@@ -36,7 +35,6 @@ export async function POST(request: NextRequest) {
 
 
         const responseText = await response.text();
-
         if (response.status === 403) {
             return NextResponse.json(
                 { 
