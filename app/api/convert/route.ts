@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
         const pythonFormData = new FormData();
         pythonFormData.append('file', file);
 
-        const response = await fetch(`${PYTHON_API_URL}/convert`, {
+        const response = await fetch(`http://167.235.132.101/api/convert`, {
             method: 'POST',
             body: pythonFormData,
             headers: {
