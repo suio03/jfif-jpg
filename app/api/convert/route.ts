@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 export const runtime = 'edge';
-const PYTHON_API_URL = process.env.PYTHON_API_URL || 'http://167.235.132.101/api';
+const PYTHON_API_URL = process.env.PYTHON_API_URL || 'https://www.imgconverters.cc/api';
 const API_KEY = process.env.API_KEY;
 
 export async function POST(request: NextRequest) {
@@ -18,8 +18,6 @@ export async function POST(request: NextRequest) {
         }
 
         // Log API details
-        console.log('Making request to:', PYTHON_API_URL);
-        console.log('API Key prefix:', API_KEY?.substring(0, 4));
 
         // Forward the file to Python API
         const pythonFormData = new FormData();
@@ -36,12 +34,8 @@ export async function POST(request: NextRequest) {
             },
         });
 
-        // Log response details
-        console.log('Response status:', response.status);
-        console.log('Response headers:', Object.fromEntries(response.headers.entries()));
 
         const responseText = await response.text();
-        console.log('Raw response:', responseText);
 
         if (response.status === 403) {
             return NextResponse.json(
