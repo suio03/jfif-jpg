@@ -27,11 +27,31 @@ export async function POST(request: NextRequest) {
             }
         });
 
-        const data = await response.json();
+        // First try to get the response as text
+        const responseText = await response.text();
+        let data;
+        
+        try {
+            // Attempt to parse the response as JSON
+            data = JSON.parse(responseText);
+        } catch (parseError) {
+            console.error('Failed to parse response:', responseText);
+            return NextResponse.json(
+                { 
+                    error: 'Invalid response from conversion service',
+                    details: responseText
+                },
+                { status: 502 }
+            );
+        }
 
         if (!response.ok) {
             return NextResponse.json(
-                { error: data.detail || 'Conversion failed' },
+                { 
+                    error: data.detail || 'Conversion failed',
+                    status: response.status,
+                    details: data
+                },
                 { status: response.status }
             );
         }
@@ -40,7 +60,10 @@ export async function POST(request: NextRequest) {
     } catch (error) {
         console.error('Conversion error:', error);
         return NextResponse.json(
-            { error: 'Internal server error' },
+            { 
+                error: 'Internal server error',
+                details: error instanceof Error ? error.message : String(error)
+            },
             { status: 500 }
         );
     }
