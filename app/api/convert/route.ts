@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
+
 export const runtime = 'edge';
 const PYTHON_API_URL = process.env.PYTHON_API_URL || 'http://167.235.132.101/api';
 const API_KEY = process.env.API_KEY;
+
 export async function POST(request: NextRequest) {
     // TODO: We need to limit the size of the file
     try {
@@ -15,9 +17,9 @@ export async function POST(request: NextRequest) {
             );
         }
 
-        // Log API details (be careful not to log the full API_KEY in production)
+        // Log API details
         console.log('Making request to:', PYTHON_API_URL);
-        console.log('API Key present:', !!API_KEY);
+        console.log('API Key prefix:', API_KEY?.substring(0, 4));
 
         // Forward the file to Python API
         const pythonFormData = new FormData();
@@ -28,16 +30,28 @@ export async function POST(request: NextRequest) {
             body: pythonFormData,
             headers: {
                 'X-API-Key': API_KEY || '',
-            }
+                'Origin': 'https://jfif2jpg.net',
+                'Accept': 'application/json',
+                'User-Agent': 'jfif2jpg-frontend'
+            },
         });
 
-        // Log response status and headers
+        // Log response details
         console.log('Response status:', response.status);
         console.log('Response headers:', Object.fromEntries(response.headers.entries()));
 
-        // First try to get the response as text
         const responseText = await response.text();
         console.log('Raw response:', responseText);
+
+        if (response.status === 403) {
+            return NextResponse.json(
+                { 
+                    error: 'Access denied',
+                    details: 'API key verification failed'
+                },
+                { status: 403 }
+            );
+        }
 
         let data;
         try {
@@ -45,11 +59,10 @@ export async function POST(request: NextRequest) {
         } catch (parseError) {
             return NextResponse.json(
                 { 
-                    error: 'API Authentication Error',
-                    status: response.status,
+                    error: 'Invalid response format',
                     details: responseText
                 },
-                { status: 401 }
+                { status: 502 }
             );
         }
 
