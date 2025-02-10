@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 export const runtime = 'edge';
-const PYTHON_API_URL = process.env.NEXT_PUBLIC_PYTHON_API_URL || 'http://localhost:8000';
+const PYTHON_API_URL = process.env.PYTHON_API_URL || 'http://167.235.132.101/api';
 const API_KEY = process.env.API_KEY;
 export async function POST(request: NextRequest) {
     // TODO: We need to limit the size of the file
@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
         // Forward the file to Python API
         const pythonFormData = new FormData();
         pythonFormData.append('file', file);
-        console.log('api key', API_KEY);
+        // console.log('api key', API_KEY);
         const response = await fetch(`${PYTHON_API_URL}/convert`, {
             method: 'POST',
             body: pythonFormData,
