@@ -15,10 +15,14 @@ export async function POST(request: NextRequest) {
             );
         }
 
+        // Log API details (be careful not to log the full API_KEY in production)
+        console.log('Making request to:', PYTHON_API_URL);
+        console.log('API Key present:', !!API_KEY);
+
         // Forward the file to Python API
         const pythonFormData = new FormData();
         pythonFormData.append('file', file);
-        // console.log('api key', API_KEY);
+
         const response = await fetch(`${PYTHON_API_URL}/convert`, {
             method: 'POST',
             body: pythonFormData,
@@ -27,21 +31,25 @@ export async function POST(request: NextRequest) {
             }
         });
 
+        // Log response status and headers
+        console.log('Response status:', response.status);
+        console.log('Response headers:', Object.fromEntries(response.headers.entries()));
+
         // First try to get the response as text
         const responseText = await response.text();
+        console.log('Raw response:', responseText);
+
         let data;
-        
         try {
-            // Attempt to parse the response as JSON
             data = JSON.parse(responseText);
         } catch (parseError) {
-            console.error('Failed to parse response:', responseText);
             return NextResponse.json(
                 { 
-                    error: 'Invalid response from conversion service',
+                    error: 'API Authentication Error',
+                    status: response.status,
                     details: responseText
                 },
-                { status: 502 }
+                { status: 401 }
             );
         }
 
